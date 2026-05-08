@@ -1,0 +1,29 @@
+:root{
+    --bg-dark: #040714;
+    --bg-card: #13151d;
+    --blue-primary: #0063e5;
+    --text-light: #f9f9f9;
+    --text-secondary: #c0c0c0;
+}
+
+body{
+    background-color: var(--bg-dark);
+}
+
+.navbar{
+    background-color: var(--bg-dark);
+}
+
+.navbar-brand{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: var(--blue-primary);
+}
