@@ -80,6 +80,32 @@ body{
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
+.cards-catalogo {
+    padding: 4rem 0;
+    color: var(--text-light);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.card-pelicula {
+    background-color: var(--bg-card);
+    color: var(--text-light);
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-pelicula:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 99, 229, 0.25);
+}
+
 @media (min-width: 992px) {
     .hero-content {
         text-align: left;
@@ -127,4 +153,81 @@ footer {
     color: var(--text-secondary);
     text-align: center;
     padding: 2rem 1rem;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-card {
+    flex: 0 0 auto;
+    width: 200px;
+}
+
+.slider-card-img {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.slider-card-meta {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+    color: var(--blue-primary);
+    transform: translateY(-50%) scale(1.2);
+}
+
+.slider-btn-left {
+    left: -10px;
+}
+
+.slider-btn-right {
+    right: -10px;
+}
+
+@media (min-width: 768px) {
+    .slider-card{
+        width: 220px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-card {
+        width: 240px;
+    }
 }
