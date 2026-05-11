@@ -124,6 +124,31 @@ body{
     }
 }
 
+.light-mode{
+    background-color: white;
+    color: black;
+}
+
+.light-mode .navbar{
+    background-color: white;
+}
+
+.light-mode .nav-link{
+    color: black;
+}
+
+.light-mode .navbar-brand{
+    color: black;
+}
+
+.light-mode .hero-section{
+    color: black;
+}
+
+.light-mode .hero-text{
+    color: #444;
+}
+
 footer {
     color: var(--text-secondary);
     text-align: center;

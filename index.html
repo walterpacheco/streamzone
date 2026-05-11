@@ -30,61 +30,83 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#"> StreamZone </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContenido"
-            aria-controls="navbarContenido"
-            aria-expanded="false"
-            aria-label="Abrir menú"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    StreamZone
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+                    aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menú">
 
-          <div class="collapse navbar-collapse" id="navbarContenido">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#inicio">Inicio</a>
-              </li>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#peliculas">Películas</a>
-              </li>
+                <div class="collapse navbar-collapse" id="navbarContenido">
 
-              <li class="nav-item">
-                <a class="nav-link" href="#series">Series</a>
-              </li>
+                    <ul class="navbar-nav ms-auto">
 
-              <li class="nav-item">
-                <a class="nav-link" href="#lista">Mi lista</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#peliculas">Películas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#series">Series</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lista">Mi lista</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <button id="themeToggle" class="btn btn-outline-light">
+                                🌙 Tema
+                            </button>
+                        </li>    
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
     </header>
     <main>
-      <section class="hero-section" id="inicio">
-        <div class="container">
-          <div class="row align-items-center">
-            <article class="col-12 col-lg-6 hero-content">
-              <h1 class="hero-title">
-                Tus películas y series favoritas en un solo lugar
-              </h1>
+        <section class="hero-section" id="inicio">
+            <div class="container">
+                <div class="row align-items-center">
 
-              <p class="hero-text">
-                Disfruta una experiencia de streaming moderna con películas,
-                series y contenido destacado para todos.
-              </p>
+                    <article class="col-12 col-lg-6 hero-content">
+                        <h1 class="hero-title" id="heroTitle">
+                            Tus películas y series favoritas en un solo lugar
+                        </h1>
 
-              <div class="hero-buttons">
-                <a href="#peliculas" class="btn btn-primary hero-btn-primary">
-                  Explorar catálogo
-                </a>
+                        <p class="hero-text" id="heroText">
+                            Disfruta una experiencia de streaming moderna con películas, series y contenido destacado
+                            para todos.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <button id="changeHero" class="btn btn-primary">
+                                Descubrir más
+                            </button>
+                            <a href="#peliculas" class="btn btn-primary hero-btn-primary">
+                                Explorar catálogo
+                            </a>
+
+                            <a href="#planes" class="btn btn-outline-light hero-btn-secondary">
+                                Ver planes
+                            </a>
+                        </div>
+                    </article>
+
+                    <figure class="col-12 col-lg-6 hero-figure">
+                        <img src="./img/hero-streaming.jpg"
+                            alt="Vista previa de películas y series en una plataforma de streaming"
+                            class="img-fluid hero-image">
+                    </figure>
 
                 <a
                   href="#planes"
