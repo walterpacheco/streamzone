@@ -319,6 +319,179 @@
         </div>
       </section>
 
+      <section class="seccion-planes" id="planes">
+        <div class="container">
+          <h2 class="seccion-tittle text-center mb-2"> Elige tu plan</h2>
+          <p class="text-center mb-4">Cancela cuando quieras. Sin compromiso</p>
+          
+          <div class="row justify-content-center">
+            <div class="col12 col-md-8 col-lg-6 col-xl-5">
+              <div class="cajas-plane p3-m-sm-4 rounded-4">
+                <div class="row g-2 mb-4">
+
+                    <div class="col-4">
+                      <div class="plan-item text-center p-2 p-sm-3 rounded-3"
+                            id="plan-basico"
+                            onclick="seleccionarPlan(basivo)"
+                            role="radio"
+                            aria-checked="false"
+                            tabindex="0">
+                          <p class="plan-nombre">Básico</p>
+                          <p class="plan-precio">$5<span>/mes<span></p>
+                          <p class="plan-detalle d-none d-sm-block">Con anuncios · HD</p>
+                      </div>                
+                  </div>
+                  
+                  <div class="col-4">
+                    <div class="plan-item plan-item-popular text-center p2 p-sm-3 rounded-3 activo"
+                          id="plan-estandar"
+                          onclick="seleccionarPlan('estandar')"
+                          role="radio"
+                          aria-checked="true"
+                          tabindex="0">
+                          <span class="plan-badge">Polular</span>
+                          <p class="plan-nombre">Estándar</p>
+                          <p class="plan-precio">$9<spna>/mes</spna></p>
+                          <p class="plan-detalle d-none d-sm-block">Sin anuncios · HD</p>
+                    </div>
+                  </div>
+
+                  <div class="col-4"
+                        id="plan-premium"
+                        onclick="seleccionarPlan('premium')"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0">
+                        <p class="plan-item">Premium</p>
+                        <p class="plan-precio">$14<span>/mes</span></p>
+                        <p class="plan-detalle d-none d-sm-block">Sin anuncios · 4K</p>
+                  </div>
+                </div>
+
+                <form id="formulario-suscripcion" novalidate>
+
+                    <div class="row g-2 mb-2">
+                      <div class="col-12 col-sm-6">
+                        <label for="sub-nombre" class="plan-label">Nombre</label>
+                        <input type="text"
+                              id="sub-nombre"
+                              class="form-control plan-input"
+                              placeholder="Tu nombre"
+                              autocomplete="given-name"
+                              required />
+                        <div class="invalid-feedback">Ingresa tu nombre</div>                    
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="sub-apellido" class="plan-label">Appelido</label>
+                        <input type="text"
+                                id="sub-apellido"
+                                class="form-control plan-input"
+                                placeholder="Tu apellido"
+                                autocomplete="family-name"
+                                required />
+                        <div class="invalid-feedback">Ingresa tu apellido</div>
+
+                      </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="sub-correo" class="plan-label">Correo electrónico</label>
+                        <input type="email"
+                                id="sub-correo"
+                                class="form-control plan-input"
+                                placeholder="tucorreo@gmail.com"
+                                autocomplete="email"
+                                required/>
+                        <div class="invalid-feedback">Ingresa un correo valido.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sub-clave" class="plan-label">Contraseña</label>
+                        <input type="password"
+                                id="sub-clave"
+                                class="form-control plan-input"
+                                placeholder="Minimo 8 caracteres"
+                                autocomplete="new-password"
+                                required
+                                minlength="8"/>
+                        <div class="invalid-feedback">Mínimo 8 caracteres</div>
+                    </div>
+
+                    <hr class="plan-separador my-3">
+                    <p class="plan-label mb-2">Dato de pago</p>
+
+                    <div class="mb-2">
+                      <label for="sub-tarjeta" class="plan-label">Número de tarjeta</label>
+                      <input type="text"
+                              id="sub-tarjeta"
+                              class="form-control plan-input"
+                              placeholder="1234 5678 9012 3456"
+                              maxlength="19"
+                              inputmode="numeric"
+                              required*>
+                      <div class="invalid-feedback">Ingresar el numero de la tarjeta.</div>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <label for="sub-titular" class="plan-label">Titular</label>
+                        <input type="text"
+                                id="sub-titular"
+                                class="form-control plan-input"
+                                placeholder="Nombre en la tarjeta"
+                                autocomplete="cc-name"
+                                required/>
+                        <div class="invalid-feedback">Ingresar el titular.</div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <label for="sub-vencimiento" class="plan-label">Vence</label>
+                        <input type="text"
+                                id="sub-vencimiento"
+                                class="form-control plan-input"
+                                placeholder="MM/AA"
+                                maxlength="5"
+                                inputmode="numeric"/>"
+                        <div class="invalid-feedback">MM/AA</div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <label for="sub-cvv" class="plan-label">CVV</label>
+                        <input type="text"
+                                id="sub-cvv"
+                                class="form-control plan-input"
+                                placeholder="123"
+                                max="4"
+                                inputmode="numeric"
+                                required />
+                        <div class="invalid-feedback">CVV inválido.</div>
+                    </div>
+            </div>
+
+            <button type="submit" class="btn btn-suscribir w-100">
+                Suscribete ahora
+            </button>
+
+            <p class="text-center mt-3 plan-seguridad">
+                🔒 Pago seguro y encriptado
+            </p>
+            <p class="text-center plan-terminos">
+                Al continuar aceptas los <a href="#">Términos de uso</a>
+                y la <a href="#">Política de privacidad</a>
+            </p>
+
+          </form>
+
+              </div>
+            </div>
+
+
+           </div>
+        </div>
+
+
+          
+        </div>
+
+      </section>
+
     </main>
 
     <footer>
