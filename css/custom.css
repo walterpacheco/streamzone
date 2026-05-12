@@ -149,6 +149,144 @@ body{
     color: #444;
 }
 
+.seccion-planes {
+    padding: 4rem 0;
+    color: var(--text-light);
+}
+
+.cajas-planes {
+    background-color: var(--bg-card);
+    border: 1px solid #1a2e4a;
+}
+
+.plan-item {
+    border: 2px solid #1a2e4a;
+    color: var(--text-light);
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s, backgound-colo 0.2s;
+}
+
+.plan-item:hover {
+    border-color: var(--blue-primary);
+    background-color: #1a2e4a;
+}
+
+.plan-item.activo {
+    border-color: var(--blue-primary);
+    background-color: #0a1f3a;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--blue-primary);
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+.plan-nombre {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.plan-precio {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.plan-precio span {
+    font-size: 12px;
+    color: #556677;
+    font-weight: 400;
+}
+
+.plan-detalle {
+    font-size: 13px;
+    color: #5b636b;
+    margin-top: 4px;
+    margin-top: 0;
+}
+
+.plan-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.plan-input {
+    background-color: #0a1a30 !important;
+    border: 1px solid #1a2e4a !important;
+    color:var(--text-light) !important;
+    font-size: 14px;
+}
+
+.plan-input::placeholder {
+    color: white !important;
+}
+
+.plam-input:focus {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 0 3px rgba(0, 99, 229, 0.2) !important;
+    background-color: #0d2040 !important;
+}
+
+.plan.separador {
+    border-color: #1a2e4a;
+}
+
+.btn-suscribir {
+    background-color: var(--blue-primary);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px;
+    border:none;
+    border-radius: 8px;
+    transition: background-color 02.s;
+}
+
+.btn-suscribir:hover {
+    background-color: #004fc4;
+    color: white;
+}
+
+.plan-seguridad {
+    font-size: 12px;
+    color: #556677;
+    margin-bottom: 4px;
+}
+
+.plan-terminos {
+    color: #4d8fff;
+    text-decoration:none
+}
+
+.plan-terminos a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
 footer {
     color: var(--text-secondary);
     text-align: center;
@@ -182,6 +320,7 @@ footer {
 .slider-card-img {
     aspect-ratio: 2 / 3;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .slider-card-meta {
