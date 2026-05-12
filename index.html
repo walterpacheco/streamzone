@@ -325,47 +325,49 @@
           <p class="text-center mb-4">Cancela cuando quieras. Sin compromiso</p>
           
           <div class="row justify-content-center">
-            <div class="col12 col-md-8 col-lg-6 col-xl-5">
-              <div class="cajas-plane p3-m-sm-4 rounded-4">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+              <div class="cajas-planes p-3 p-sm-4 rounded-4">
                 <div class="row g-2 mb-4">
 
                     <div class="col-4">
                       <div class="plan-item text-center p-2 p-sm-3 rounded-3"
                             id="plan-basico"
-                            onclick="seleccionarPlan(basivo)"
+                            onclick="seleccionarPlan('basico')"
                             role="radio"
                             aria-checked="false"
                             tabindex="0">
                           <p class="plan-nombre">Básico</p>
-                          <p class="plan-precio">$5<span>/mes<span></p>
+                          <p class="plan-precio">$5.990<span>/mes</span></p>
                           <p class="plan-detalle d-none d-sm-block">Con anuncios · HD</p>
                       </div>                
                   </div>
                   
                   <div class="col-4">
-                    <div class="plan-item plan-item-popular text-center p2 p-sm-3 rounded-3 activo"
+                    <div class="plan-item plan-item-popular text-center p-2 p-sm-3 rounded-3 activo"
                           id="plan-estandar"
                           onclick="seleccionarPlan('estandar')"
                           role="radio"
                           aria-checked="true"
                           tabindex="0">
-                          <span class="plan-badge">Polular</span>
+                          <span class="plan-badge">Popular</span>
                           <p class="plan-nombre">Estándar</p>
-                          <p class="plan-precio">$9<spna>/mes</spna></p>
+                          <p class="plan-precio">$9.990<span>/mes</span></p>
                           <p class="plan-detalle d-none d-sm-block">Sin anuncios · HD</p>
                     </div>
                   </div>
 
-                  <div class="col-4"
+                  <div class="col-4">
+                    <div class="plan-item text-center p-2 p-sm-3 rounded-3"
                         id="plan-premium"
                         onclick="seleccionarPlan('premium')"
                         role="radio"
                         aria-checked="false"
                         tabindex="0">
-                        <p class="plan-item">Premium</p>
-                        <p class="plan-precio">$14<span>/mes</span></p>
+                        <p class="plan-nombre">Premium</p>
+                        <p class="plan-precio">$14.990<span>/mes</span></p>
                         <p class="plan-detalle d-none d-sm-block">Sin anuncios · 4K</p>
-                  </div>
+                     </div>
+                  </div>  
                 </div>
 
                 <form id="formulario-suscripcion" novalidate>
@@ -379,11 +381,10 @@
                               placeholder="Tu nombre"
                               autocomplete="given-name"
                               required />
-                        <div class="invalid-feedback">Ingresa tu nombre</div>                    
+                        <div class="invalid-feedback">Ingresa tu nombre</div>
                       </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="sub-apellido" class="plan-label">Appelido</label>
+                      <div class="col-12 col-sm-6">
+                        <label for="sub-apellido" class="plan-label">Apellido</label>
                         <input type="text"
                                 id="sub-apellido"
                                 class="form-control plan-input"
@@ -391,7 +392,6 @@
                                 autocomplete="family-name"
                                 required />
                         <div class="invalid-feedback">Ingresa tu apellido</div>
-
                       </div>
                     </div>
 
@@ -429,10 +429,10 @@
                               placeholder="1234 5678 9012 3456"
                               maxlength="19"
                               inputmode="numeric"
-                              required*>
+                              required/>
                       <div class="invalid-feedback">Ingresar el numero de la tarjeta.</div>
                     </div>
-                    <div class="row g-2 mb-3">
+                    <div class="mb-3">
                         <label for="sub-titular" class="plan-label">Titular</label>
                         <input type="text"
                                 id="sub-titular"
@@ -442,28 +442,29 @@
                                 required/>
                         <div class="invalid-feedback">Ingresar el titular.</div>
                     </div>
-                    <div class="col-6 col-sm-3">
-                        <label for="sub-vencimiento" class="plan-label">Vence</label>
-                        <input type="text"
-                                id="sub-vencimiento"
-                                class="form-control plan-input"
-                                placeholder="MM/AA"
-                                maxlength="5"
-                                inputmode="numeric"/>"
-                        <div class="invalid-feedback">MM/AA</div>
+                    <div class="row g-2 mb-3">
+                      <div class="col-6 col-sm-3">
+                          <label for="sub-vencimiento" class="plan-label">Vence</label>
+                          <input type="text"
+                                  id="sub-vencimiento"
+                                  class="form-control plan-input"
+                                  placeholder="MM/AA"
+                                  maxlength="5"
+                                  inputmode="numeric"/>
+                          <div class="invalid-feedback">MM/AA</div>
+                      </div>
+                      <div class="col-6 col-sm-3">
+                          <label for="sub-cvv" class="plan-label">CVV</label>
+                          <input type="text"
+                                  id="sub-cvv"
+                                  class="form-control plan-input"
+                                  placeholder="123"
+                                  maxlength="3"
+                                  inputmode="numeric"
+                                  required />
+                          <div class="invalid-feedback">CVV inválido.</div>
+                      </div>
                     </div>
-                    <div class="col-6 col-sm-3">
-                        <label for="sub-cvv" class="plan-label">CVV</label>
-                        <input type="text"
-                                id="sub-cvv"
-                                class="form-control plan-input"
-                                placeholder="123"
-                                max="4"
-                                inputmode="numeric"
-                                required />
-                        <div class="invalid-feedback">CVV inválido.</div>
-                    </div>
-            </div>
 
             <button type="submit" class="btn btn-suscribir w-100">
                 Suscribete ahora
@@ -483,11 +484,7 @@
             </div>
 
 
-           </div>
-        </div>
-
-
-          
+          </div>
         </div>
 
       </section>
