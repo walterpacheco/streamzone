@@ -70,4 +70,29 @@ heroButton.addEventListener("click", function () {
       btnRight.addEventListener('click', () => {
           track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
       });
-  });
+});
+    const modalDetalle = document.getElementById('modalDetalle');
+
+    if (modalDetalle) {
+        modalDetalle.addEventListener('show.bs.modal', function (event) {
+            const card = event.relatedTarget;
+
+            const titulo = card.getAttribute('data-titulo');
+            const año = card.getAttribute('data-año');
+            const genero = card.getAttribute('data-genero');
+            const duracion= card.getAttribute('data-duracion')
+            const img = card.getAttribute('data-img');
+            const descripcion = card.getAttribute('data-descripcion');
+
+            modalDetalle.querySelector('#modalDetalleLabel').textContent = titulo;
+            modalDetalle.querySelector('#modal-año').textContent = año;
+            modalDetalle.querySelector('#modal-genero').textContent = genero;
+            modalDetalle.querySelector('#modal-duracion').textContent = duracion;
+            modalDetalle.querySelector('#modal-descripcion').textContent = descripcion;
+            modalDetalle.querySelector('#modal-img').src = img;
+            modalDetalle.querySelector('#modal-img').alt = 'Portada de ' + titulo;
+        }
+                
+        );
+        
+    }

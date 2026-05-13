@@ -370,3 +370,72 @@ footer {
         width: 240px;
     }
 }
+
+.modal-contenido {
+    background-color: var(--bg-card);
+    color: var(--text-light);
+    border-radius: 1rem;
+    border: 1px solid #1a2e4a;
+}
+
+.modal-portada {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    object-fit: cover;
+
+}
+
+.modal-title {
+font-size: 1.5em;
+font-weight: 700;
+color: var(--text-light);
+}
+
+.modal-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.modal-descripcion {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #1a2e4a;
+    border: none;
+    color: var(--text-light);
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #243a5e;
+}
+
+.modal-body::-webkit-scrollbar {
+width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 1rem 0;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 99, 229, 0.4);
+    border-radius: 10px;
+    transform-origin: background 0.3s ease;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-primary);
+}
+
+.modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 99, 229, 0.4) transparent;
+}
