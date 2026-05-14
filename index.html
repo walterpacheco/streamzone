@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clon educativo inspirado en Disney+, no copia exacta de marca.">
-    <meta name="author" content="Luis Araya y Walter Pacheco">
-    <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript, Streaming, Frontend">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./css/custom.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Clon educativo inspirado en Disney+, no copia exacta de marca."
+    />
+    <meta name="author" content="Luis Araya y Walter Pacheco" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, Bootstrap, JavaScript, Streaming, Frontend"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/custom.css" />
     <title>StreamZone</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-
         <nav class="navbar navbar-expand-lg navbar-dark">
-
             <div class="container">
-
                 <a class="navbar-brand" href="#">
                     StreamZone
                 </a>
-
-                <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarContenido"
-                    aria-controls="navbarContenido"
-                    aria-expanded="false"
-                    aria-label="Abrir menú">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+                    aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menú">
 
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarContenido">
 
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
                             <a class="nav-link" href="#inicio">Inicio</a>
@@ -62,322 +58,539 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#planes">Planes</a>
+                            <a class="nav-link" href="#lista">Mi lista</a>
                         </li>
-
                         <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-
                             <button id="themeToggle" class="btn btn-outline-light">
-                                🌙 Oscuro
+                                🌙 Tema
                             </button>
-
-                        </li>
+                        </li>    
 
                     </ul>
 
                 </div>
 
             </div>
-
         </nav>
-
     </header>
-
-
     <main>
-
         <section class="hero-section" id="inicio">
-
             <div class="container">
-
                 <div class="row align-items-center">
 
                     <article class="col-12 col-lg-6 hero-content">
-
                         <h1 class="hero-title" id="heroTitle">
                             Tus películas y series favoritas en un solo lugar
                         </h1>
 
                         <p class="hero-text" id="heroText">
-                            Disfruta una experiencia de streaming moderna con películas, series y contenido destacado para todos.
+                            Disfruta una experiencia de streaming moderna con películas, series y contenido destacado
+                            para todos.
                         </p>
 
                         <div class="hero-buttons">
-
+                            <button id="changeHero" class="btn btn-primary">
+                                Descubrir más
+                            </button>
                             <a href="#peliculas" class="btn btn-primary hero-btn-primary">
                                 Explorar catálogo
                             </a>
 
-                            <button id="changeHero" class="btn btn-outline-light hero-btn-secondary">
-                                Descubrir más
-                            </button>
-
+                            <a href="#planes" class="btn btn-outline-light hero-btn-secondary">
+                                Ver planes
+                            </a>
                         </div>
-
                     </article>
-
 
                     <figure class="col-12 col-lg-6 hero-figure">
-
-                        <img
-                            src="./img/hero-streaming.jpg"
+                        <img src="./img/hero-streaming.jpg"
                             alt="Vista previa de películas y series en una plataforma de streaming"
-                            class="img-fluid hero-image"
-                            loading="lazy">
-
+                            class="img-fluid hero-image">
                     </figure>
 
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="cards-catalogo" id="peliculas">
-
-            <div class="container">
-
-                <h2 class="section-title">Películas destacadas</h2>
-
-                <div class="row g-4">
-
-                    <article class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card card-pelicula h-100">
-
-                            <img
-                                src="./img/pelicula-4.webp"
-                                class="card-img-top"
-                                alt="Película de ciencia ficción"
-                                loading="lazy">
-
-                            <div class="card-body">
-
-                                <h3 class="card-title">Guardianes Estelares</h3>
-
-                                <p class="card-text">
-                                    Una aventura espacial llena de acción.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card card-pelicula h-100">
-
-                            <img
-                                src="./img/pelicula-5.webp"
-                                class="card-img-top"
-                                alt="Película de fantasía"
-                                loading="lazy">
-
-                            <div class="card-body">
-
-                                <h3 class="card-title">Mundo Mágico</h3>
-
-                                <p class="card-text">
-                                    Descubre un reino lleno de fantasía.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card card-pelicula h-100">
-
-                            <img
-                                src="./img/pelicula-6.webp"
-                                class="card-img-top"
-                                alt="Película de superhéroes"
-                                loading="lazy">
-
-                            <div class="card-body">
-
-                                <h3 class="card-title">Héroes del Futuro</h3>
-
-                                <p class="card-text">
-                                    Acción y tecnología en una nueva era.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="container py-5">
-
-            <h2 class="section-title">Tendencias</h2>
-
-            <div class="slider-wrapper">
-
-                <button class="slider-btn slider-btn-left">
-                    ‹
-                </button>
-
-                <div class="slider-track" id="sliderPeliculas">
-
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-1.jpg"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 1"
-                            loading="lazy">
-
-                    </article>
-
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-2.webp"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 2"
-                            loading="lazy">
-
-                    </article>
-
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-3.jpg"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 3"
-                            loading="lazy">
-
-                    </article>
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-7.webp"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 3"
-                            loading="lazy">
-
-                    </article>
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-8.webp"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 3"
-                            loading="lazy">
-
-                    </article>
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-9.webp"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 3"
-                            loading="lazy">
-
-                    </article>
-                    <article class="slider-card">
-
-                        <img
-                            src="./img/pelicula-10.webp"
-                            class="img-fluid rounded slider-card-img"
-                            alt="Poster película 3"
-                            loading="lazy">
-
-                    </article>
-
-                </div>
-
-                <button class="slider-btn slider-btn-right">
-                    ›
-                </button>
-
-            </div>
-
-        </section>
-
-        <div class="modal fade"
-            id="modalDetalle"
-            tabindex="-1"
-            aria-labelledby="modalDetalleLabel"
-            aria-hidden="true">
-
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-
-                <div class="modal-content modal-contenido">
-
-                    <div class="modal-header border-0">
-
-                        <h5 class="modal-title" id="modalDetalleLabel">
-                            Detalle película
-                        </h5>
-
-                        <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Cerrar">
-                        </button>
-
-                    </div>
-
-                    <div class="modal-body">
-
-                        <img
-                            id="modal-img"
-                            class="modal-portada mb-4"
-                            alt="Detalle película"
-                            loading="lazy">
-
-                        <p class="modal-meta">
-                            <span id="modal-año"></span> •
-                            <span id="modal-genero"></span> •
-                            <span id="modal-duracion"></span>
-                        </p>
-
-                        <p id="modal-descripcion" class="modal-descripcion"></p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+                <a
+                  href="#planes"
+                  class="btn btn-outline-light hero-btn-secondary"
+                >
+                  Ver planes
+                </a>
+              </div>
+            </article>
+
+            <figure class="col-12 col-lg-6 hero-figure">
+              <img
+                src="./img/hero-streaming.jpg"
+                alt="Vista previa de películas y series en una plataforma de streaming"
+                class="img-fluid hero-image"
+              />
+            </figure>
+          </div>
         </div>
+      </section>
+
+      <section class="cards-catalogo" id="peliculas">
+        <div class="container">
+          <h2 class="section-title text-center mb-4">
+            Recomendaciones para ti
+          </h2>
+
+          <div class="slider-wrapper">
+            <div class="slider-btn-area left-area">
+              <button class="slider-btn slider-btn-left">&#x276E;</button>
+            </div>
+            <div class="slider-track" id="sliderPeliculas">
+              <article
+                class="slider-card card card-pelicula"
+                data-bs-toggle="modal"
+                data-bs-target="#modalDetalle"
+                data-titulo="🎬 Avengers: Endgame"
+                data-año="2019"
+                data-genero="Acción / Aventura"
+                data-duracion="3h 1m"
+                data-img="img/pelicula-1.jpg"
+                data-descripcion="Después de los devastadores eventos de Infinity War, los Vengadores restantes se reúnen para revertir las acciones de Thanos."
+              >
+                <img
+                  src="./img/pelicula-1.jpg"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Avengers End Game"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Avengers: Endgame</h3>
+                  <p class="card-text slider-card-meta">2019 · Acción.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+               data-bs-toggle="modal"
+                data-bs-target="#modalDetalle"
+                data-titulo="🎬  Monsters University"
+                data-año="2019"
+                data-genero="Acción / Aventura"
+                data-duracion="3h 1m"
+                data-img="img/pelicula-2.webp"
+                data-descripcion="Una mirada a la relación entre Mike y Sulley durante sus días en Monsters University, cuando no eran necesariamente los mejores amigos."
+         
+              >
+                <img
+                  src="./img/pelicula-2.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Monsters University"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Monsters University</h3>
+                  <p class="card-text slider-card-meta">2013 · Animación.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Zootopia"
+              data-año="2016"
+              data-genero="Animación"
+              data-duracion="1h 48min"
+              data-img="img/pelicula-3.jpg"
+              data-descripcion="En una ciudad de animales antropomorfos, un conejo novato y un zorro estafador deben trabajar juntos para descubrir una conspiración."
+              >
+                <img
+                  src="./img/pelicula-3.jpg"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Zootopia"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Zootopia</h3>
+                  <p class="card-text slider-card-meta">2016 · Animación.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Inhuimans"
+              data-año="2021"
+              data-genero="Acción"
+              data-duracion="1h 42m"
+              data-img="img/pelicula-4.webp"
+              data-descripcion="Una comunidad aislada de superhumanos lucha por protegerse."
+              >
+                <img
+                  src="./img/pelicula-4.webp""
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Inhumans"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Inhumans</h3>
+                  <p class="card-text slider-card-meta">2017 · Acción.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Wanda Vision"
+              data-año="2017"
+              data-genero="Acción"
+              data-duracion="2h 15m"
+              data-img="img/pelicula-5.webp"
+              data-descripcion="La Bruja Escarlata y Vision, dos seres superpoderosos con una vida familiar ideal, sospechan que no todo es como aparenta."
+              >
+                <img
+                  src="./img/pelicula-5.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Wanda Vision"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Wanda Vision</h3>
+                  <p class="card-text slider-card-meta">2021 · Acción.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Avengers: Age of Ultron<"
+              data-año="2020"
+              data-genero="Acción"
+              data-duracion="2h 21m"
+              data-img="img/pelicula-6.webp"
+              data-descripcion="Cuando Tony Stark y Bruce Banner tratan de lanzar el programa, Ultron, las cosas terminan mal y ahora está en manos de los héroes del planeta de detener a los villanos de Ultron de llevar a cabo su terrorífico plan."
+              >
+                <img
+                  src="./img/pelicula-6.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Avengers Age of Ultron"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Avengers: Age of Ultron</h3>
+                  <p class="card-text slider-card-meta">2015 · Animación.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Avengers"
+              data-año="2012"
+              data-genero="Acción"
+              data-duracion="2h 23m"
+              data-img="img/pelicula-7.webp"
+              data-descripcion="Los héroes del planeta deberán unirse y luchar contra el malvado Loki y su ejercito de alienígenas para evitar la esclavización del mundo."
+              >
+                <img
+                  src="./img/pelicula-7.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Avengers"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Avengers</h3>
+                  <p class="card-text slider-card-meta">2012 · Acción.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Doctor Strange: Hechicero Supremo"
+              data-año="2016"
+              data-genero="Acción"
+              data-duracion="2h 15m"
+              data-img="img/pelicula-8.webp"
+              data-descripcion="Durante un viaje de curación física y espiritual, un brillante neurocirujano se ve arrastrado al mundo de las artes místicas."
+              >
+                <img
+                  src="./img/pelicula-8.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Doctor Strange Hechicero Supremo"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Doctor Strange: Hechicero Supremo</h3>
+                  <p class="card-text slider-card-meta">2016 · Animación.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Spider-Man: No Way Home"
+              data-año="2021"
+              data-genero="Acción"
+              data-duracion="2h 28m"
+              data-img="img/pelicula-9.webp"
+              data-descripcion="Con la identidad de Spider-Man revelada, Peter le pide ayuda al Doctor Strange. Cuando un hechizo sale mal, comienzan a aparecer enemigos de otros mundos, lo que obliga a Peter a descubrir lo que realmente significa ser Spider-Man."
+              >
+                <img
+                  src="./img/pelicula-9.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Spider-Man No Way Home"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Spider-Man No Way Home</h3>
+                  <p class="card-text slider-card-meta">2021 · Acción.</p>
+                </div>
+              </article>
+
+              <article 
+              class="slider-card card card-pelicula"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDetalle"
+              data-titulo="🎬 Doctor Strange in the Multiverse of Madness"
+              data-año="2022"
+              data-genero="Acción"
+              data-duracion="2h 6m"
+              data-img="img/pelicula-10.webp"
+              data-descripcion="Doctor Strange se alía con una misteriosa adolescente que ha visto en sueños, que puede viajar entre multiversos, para combatir multiples amenazas."
+              >
+                <img
+                  src="./img/pelicula-10.webp"
+                  class="card-img-top slider-card-img"
+                  alt="Portada de la pelicula Doctor Strange in the Multiverse of Madness"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6">Doctor Strange in the Multiverse of Madness</h3>
+                  <p class="card-text slider-card-meta">2022 · Animación.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="slider-btn-area right-area">
+              <button class="slider-btn slider-btn-right">&#x276F;</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="modalDetalleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content modal-contenido">
+
+                <div class="modal-header border-0">
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                  <img id="modal-img" src="" alt="Portada de la película" class="modal-portada mb-3">
+
+                  <h5 class="modal-title mb-2" id="modalDetalleLabel"></h5>
+
+                  <p class="modal-meta mb-3">
+                    <span id="modal-año"></span>
+                    <span id="modal-genero"></span>
+                    <span id="modal-duracion"></span>
+                  </p>
+
+                  <p class="modal-descripcion" id="modal-descripcion"></p>
+                </div>
+
+                <div class="modal-footer border-0">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion-planes" id="planes">
+        <div class="container">
+          <h2 class="seccion-tittle text-center mb-2"> Elige tu plan</h2>
+          <p class="text-center mb-4">Cancela cuando quieras. Sin compromiso</p>
+          
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+              <div class="cajas-planes p-3 p-sm-4 rounded-4">
+                <div class="row g-2 mb-4">
+
+                    <div class="col-4">
+                      <div class="plan-item text-center p-2 p-sm-3 rounded-3"
+                            id="plan-basico"
+                            onclick="seleccionarPlan('basico')"
+                            role="radio"
+                            aria-checked="false"
+                            tabindex="0">
+                          <p class="plan-nombre">Básico</p>
+                          <p class="plan-precio">$5.990<span>/mes</span></p>
+                          <p class="plan-detalle d-none d-sm-block">Con anuncios · HD</p>
+                      </div>                
+                  </div>
+                  
+                  <div class="col-4">
+                    <div class="plan-item plan-item-popular text-center p-2 p-sm-3 rounded-3 activo"
+                          id="plan-estandar"
+                          onclick="seleccionarPlan('estandar')"
+                          role="radio"
+                          aria-checked="true"
+                          tabindex="0">
+                          <span class="plan-badge">Popular</span>
+                          <p class="plan-nombre">Estándar</p>
+                          <p class="plan-precio">$9.990<span>/mes</span></p>
+                          <p class="plan-detalle d-none d-sm-block">Sin anuncios · HD</p>
+                    </div>
+                  </div>
+
+                  <div class="col-4">
+                    <div class="plan-item text-center p-2 p-sm-3 rounded-3"
+                        id="plan-premium"
+                        onclick="seleccionarPlan('premium')"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0">
+                        <p class="plan-nombre">Premium</p>
+                        <p class="plan-precio">$14.990<span>/mes</span></p>
+                        <p class="plan-detalle d-none d-sm-block">Sin anuncios · 4K</p>
+                     </div>
+                  </div>  
+                </div>
+
+                <form id="formulario-suscripcion" novalidate>
+
+                    <div class="row g-2 mb-2">
+                      <div class="col-12 col-sm-6">
+                        <label for="sub-nombre" class="plan-label">Nombre</label>
+                        <input type="text"
+                              id="sub-nombre"
+                              class="form-control plan-input"
+                              placeholder="Tu nombre"
+                              autocomplete="given-name"
+                              required />
+                        <div class="invalid-feedback">Ingresa tu nombre</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <label for="sub-apellido" class="plan-label">Apellido</label>
+                        <input type="text"
+                                id="sub-apellido"
+                                class="form-control plan-input"
+                                placeholder="Tu apellido"
+                                autocomplete="family-name"
+                                required />
+                        <div class="invalid-feedback">Ingresa tu apellido</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="sub-correo" class="plan-label">Correo electrónico</label>
+                        <input type="email"
+                                id="sub-correo"
+                                class="form-control plan-input"
+                                placeholder="tucorreo@gmail.com"
+                                autocomplete="email"
+                                required/>
+                        <div class="invalid-feedback">Ingresa un correo valido.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sub-clave" class="plan-label">Contraseña</label>
+                        <input type="password"
+                                id="sub-clave"
+                                class="form-control plan-input"
+                                placeholder="Minimo 8 caracteres"
+                                autocomplete="new-password"
+                                required
+                                minlength="8"/>
+                        <div class="invalid-feedback">Mínimo 8 caracteres</div>
+                    </div>
+
+                    <hr class="plan-separador my-3">
+                    <p class="plan-label mb-2">Dato de pago</p>
+
+                    <div class="mb-2">
+                      <label for="sub-tarjeta" class="plan-label">Número de tarjeta</label>
+                      <input type="text"
+                              id="sub-tarjeta"
+                              class="form-control plan-input"
+                              placeholder="1234 5678 9012 3456"
+                              maxlength="19"
+                              inputmode="numeric"
+                              required/>
+                      <div class="invalid-feedback">Ingresar el numero de la tarjeta.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sub-titular" class="plan-label">Titular</label>
+                        <input type="text"
+                                id="sub-titular"
+                                class="form-control plan-input"
+                                placeholder="Nombre en la tarjeta"
+                                autocomplete="cc-name"
+                                required/>
+                        <div class="invalid-feedback">Ingresar el titular.</div>
+                    </div>
+                    <div class="row g-2 mb-3">
+                      <div class="col-6 col-sm-3">
+                          <label for="sub-vencimiento" class="plan-label">Vence</label>
+                          <input type="text"
+                                  id="sub-vencimiento"
+                                  class="form-control plan-input"
+                                  placeholder="MM/AA"
+                                  maxlength="5"
+                                  inputmode="numeric"/>
+                          <div class="invalid-feedback">MM/AA</div>
+                      </div>
+                      <div class="col-6 col-sm-3">
+                          <label for="sub-cvv" class="plan-label">CVV</label>
+                          <input type="text"
+                                  id="sub-cvv"
+                                  class="form-control plan-input"
+                                  placeholder="123"
+                                  maxlength="3"
+                                  inputmode="numeric"
+                                  required />
+                          <div class="invalid-feedback">CVV inválido.</div>
+                      </div>
+                    </div>
+
+            <button type="submit" class="btn btn-suscribir w-100">
+                Suscribete ahora
+            </button>
+
+            <p class="text-center mt-3 plan-seguridad">
+                🔒 Pago seguro y encriptado
+            </p>
+            <p class="text-center plan-terminos">
+                Al continuar aceptas los <a href="#">Términos de uso</a>
+                y la <a href="#">Política de privacidad</a>
+            </p>
+
+          </form>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </section>
 
     </main>
 
-
     <footer>
-
-        <p>
-            &copy; 2026 StreamZone - Luis Araya y Walter Pacheco
-        </p>
-
+      <p>&copy; 2026 StreamZone - Luis Araya y Walter Pacheco</p>
     </footer>
-
-
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous">
-    </script>
-
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
