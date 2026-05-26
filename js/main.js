@@ -1,3 +1,4 @@
+import { obtenerSeries } from "./api.js";
 const themeButton = document.querySelector("#themeToggle");
 const body = document.body;
 
@@ -192,3 +193,88 @@ if (modalDetalle) {
     );
 
 }
+
+const contenedorSeries = document.querySelector("#apiSeries");
+const apiEstado = document.querySelector("#apiEstado");
+
+function crearCardSerie(item) {
+    const serie = item.show;
+
+    const columna = document.createElement("article");
+    columna.className = "col-12 col-md-6 col-lg-4";
+
+    const card = document.createElement("div");
+    card.className = "card card-pelicula h-100";
+
+    const imagen = document.createElement("img");
+    imagen.className = "card-img-top";
+    imagen.alt = "Portada de " + serie.name;
+    imagen.loading = "lazy";
+    if (serie.image && serie.image.medium) {
+
+        imagen.src = serie.image.medium;
+    
+    } else {
+    
+        imagen.src = "https://via.placeholder.com/300x450?text=Sin+Imagen";
+    
+    }
+    imagen.onerror = function () {
+        this.onerror = null;
+        this.src = "./img/placeholder.webp";
+    };
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
+    const titulo = document.createElement("h3");
+    titulo.className = "card-title";
+    titulo.textContent = serie.name;
+
+    const genero = document.createElement("p");
+    genero.className = "card-text";
+    genero.textContent = serie.genres.length > 0
+        ? "Género: " + serie.genres.join(", ")
+        : "Género no disponible";
+
+    const idioma = document.createElement("p");
+    idioma.className = "card-text";
+    idioma.textContent = "Idioma: " + (serie.language || "No disponible");
+
+    cardBody.appendChild(titulo);
+    cardBody.appendChild(genero);
+    cardBody.appendChild(idioma);
+
+    card.appendChild(imagen);
+    card.appendChild(cardBody);
+
+    columna.appendChild(card);
+
+    return columna;
+}
+
+async function renderizarSeries() {
+    if (!contenedorSeries || !apiEstado) return;
+
+    apiEstado.textContent = "Cargando series desde TVMaze...";
+
+    const series = await obtenerSeries();
+
+    contenedorSeries.textContent = "";
+
+    if (series.length === 0) {
+        apiEstado.textContent = "No se pudieron cargar las series. Intenta nuevamente más tarde.";
+        return;
+    }
+
+    apiEstado.textContent = "";
+
+    series.forEach(function (serie) {
+        const card = crearCardSerie(serie);
+        contenedorSeries.appendChild(card);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    renderizarSeries();
+});
