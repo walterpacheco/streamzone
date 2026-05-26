@@ -1,9 +1,11 @@
 
+import { obtenerSeries } from "./api.js";
 import {
     guardarTema,
     obtenerTema
 } from "./storage.js";
-import { obtenerSeries } from "./api.js";
+
+import "./validacion.js";
 
 /* =========================
    CAMBIO DE TEMA
