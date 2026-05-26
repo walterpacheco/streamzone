@@ -7,7 +7,7 @@ import { obtenerSeries } from "./api.js";
 
 /* =========================
    CAMBIO DE TEMA
-
+*/
 const themeButton = document.querySelector("#themeToggle");
 const body = document.body;
 const temaGuardado = obtenerTema();
