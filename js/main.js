@@ -1,21 +1,43 @@
+
+import {
+    guardarTema,
+    obtenerTema
+} from "./storage.js";
+
 const themeButton = document.querySelector("#themeToggle");
 const body = document.body;
+const temaGuardado = obtenerTema();
+
+if (temaGuardado === "light") {
+
+    body.classList.add("light-mode");
+
+    themeButton.textContent = "☀️ Claro";
+
+} else {
+
+    themeButton.textContent = "🌙 Oscuro";
+}
 
 if (themeButton) {
 
     themeButton.addEventListener("click", function () {
 
         body.classList.toggle("light-mode");
-
+    
         if (body.classList.contains("light-mode")) {
-
+    
             themeButton.textContent = "☀️ Claro";
-
+    
+            guardarTema("light");
+    
         } else {
-
+    
             themeButton.textContent = "🌙 Oscuro";
+    
+            guardarTema("dark");
         }
-
+    
     });
 
 }
