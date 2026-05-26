@@ -107,27 +107,12 @@
                             alt="Vista previa de películas y series en una plataforma de streaming"
                             class="img-fluid hero-image">
                     </figure>
-
-                <a
-                  href="#planes"
-                  class="btn btn-outline-light hero-btn-secondary"
-                >
-                  Ver planes
-                </a>
+                </div>
               </div>
             </article>
-
-            <figure class="col-12 col-lg-6 hero-figure">
-              <img
-                src="./img/hero-streaming.jpg"
-                alt="Vista previa de películas y series en una plataforma de streaming"
-                class="img-fluid hero-image"
-              />
-            </figure>
           </div>
         </div>
       </section>
-
       <section class="cards-catalogo" id="peliculas">
         <div class="container">
           <h2 class="section-title text-center mb-4">
@@ -221,7 +206,7 @@
               data-descripcion="Una comunidad aislada de superhumanos lucha por protegerse."
               >
                 <img
-                  src="./img/pelicula-4.webp""
+                  src="./img/pelicula-4.webp"
                   class="card-img-top slider-card-img"
                   alt="Portada de la pelicula Inhumans"
                   loading="lazy"
@@ -387,7 +372,7 @@
                 </div>
 
                 <div class="modal-body">
-                  <img id="modal-img" src="" alt="Portada de la película" class="modal-portada mb-3">
+                  <img id="modal-img" src="" alt="Portada de la película" class="modal-portada mb-3" loading="lazy">
 
                   <h5 class="modal-title mb-2" id="modalDetalleLabel"></h5>
 
@@ -410,6 +395,35 @@
           </div>
         </div>
       </section>
+      <section class="container container-fluid">
+        <div class="busqueda-container mb-5">
+
+            <label
+                for="busquedaSeries"
+                class="form-label busqueda-label">
+        
+                Buscar series
+        
+            </label>
+        
+            <div class="busqueda-wrapper">
+        
+                <span class="busqueda-icon">
+        
+                    🔍
+        
+                </span>
+        
+                <input
+                    type="text"
+                    id="busquedaSeries"
+                    class="form-control busqueda-input"
+                    placeholder="Buscar series, géneros o idioma...">
+        
+            </div>
+        
+        </div>
+      </section>
       <section class="cards-catalogo" id="api-series">
         <div class="container">
             <h2 class="section-title">Series desde TVMaze</h2>
@@ -421,7 +435,6 @@
             <div id="apiSeries" class="row g-4"></div>
         </div>
     </section>
-
       <section class="seccion-planes" id="planes">
         <div class="container">
           <h2 class="seccion-tittle text-center mb-2"> Elige tu plan</h2>
